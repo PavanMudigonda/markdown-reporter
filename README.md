@@ -17,7 +17,6 @@ jobs:
     steps:
     
       - name: use this action, with existing test results
-        id: lines-of-code-reporter
         uses: PavanMudigonda/markdown-reporter@v0.1
         with:
           markdown_path: README.md
