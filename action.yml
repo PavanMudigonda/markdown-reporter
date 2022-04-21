@@ -2,33 +2,27 @@
 ## This is a SAMPLE metadata file for a GitHub Action.  For more info:
 ##    https://help.github.com/en/articles/metadata-syntax-for-github-actions
 
-name: lines-of-code-reporter
+name: markdown-reporter
 author: Pavan Mudigonda
 description: |
-  Calculates and publishes JaCoCo lines of code report in GitHub Actions as Checksuite.
+  Publishes the markdown file provided in GitHub Actions as Checkrun.
 
-## Here you describe your *formal* inputs -- those that are
-## documented and can be displayed by the marketplace.
-## You also use these to identify the *required* inputs.
 inputs:
 
-  directory:
+  markdown_path:
     description: |
-      Path to the JaCoCo coverage results file which will be used to generate
-      a report. The only coverage results format supported is the
-      JaCoCo XML schema.
-    required: false
-    default: ./
+      markdown file path
+    required: true
 
-  exclude_dir:
+  report_name:
     description: |
-      # directories to be excluded.
-    required: false
+      markdown file path
+    required: true
 
-  exclude_lang:
+  report_title:
     description: |
-      # languages to be excluded.comma separated.
-    required: false
+      markdown file path
+    required: true
 
   github_token:
     description: |
@@ -39,28 +33,8 @@ inputs:
   skip_check_run:
     description: |
       If true, will skip attaching the Tests Result report to
-      the Workflow Run using a Check Run.  Useful if you just
-      want to produce a Gist-based report via the `gist_name`
-      and `gist_token` input parameters.
+      the Workflow Run using a Check Run.  Useful if you want to turn if you run in to 65k problem.
     required: false
-
-## Here you describe your *formal* outputs.
-outputs:
-
-  loc_report:
-    description: Output report in markdown
-
-  total_lines:
-    description: Total Lines of Code
-
-  check_run_id:
-    description: check run id of the report
-
-  check_run_url:
-    description: check run url of the report
-    
-
-
 
 branding:
   color: purple
