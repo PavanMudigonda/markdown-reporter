@@ -33,7 +33,7 @@ This Action defines the following formal inputs.
 
 | Name | Req | Description
 |-|-|-|
-|**`markdown_path`**  | true | Markdown Path. 
+|**`markdown_path`**  | true | Markdown file or text file Path. 
 |**`github_token`** | true | Input the GITHUB TOKEN Or Personal Access Token you would like to use. Recommended to use GitHub auto generated token ${{ secrets.GITHUB_TOKEN }}
 |**`skip_check_run`** | true | If true, will skip attaching the Coverage Result report to the Workflow Run using a Check Run. 
 |**`report_name`**  | true | Report name
